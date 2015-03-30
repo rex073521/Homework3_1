@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    //建立形狀選單，子選單為方形及圓形
+    <item
+        android:id="@+id/shape"
+        android:title="@string/shape">
+        <menu>
+            <item
+                android:id="@+id/rect"
+                android:title="@string/rect" />
+            <item
+                android:id="@+id/circle"
+                android:title="@string/circle" />
+        </menu>
+    </item>
+    //建立顏色選單，子選單為紅色及藍色
+    <item
+        android:id="@+id/color"
+        android:title="@string/color">
+        <menu>
+            <item
+                android:id="@+id/red"
+                android:title="@string/red" />
+            <item
+                android:id="@+id/blue"
+                android:title="@string/blue" />
+        </menu>
+    </item>
+</menu>
