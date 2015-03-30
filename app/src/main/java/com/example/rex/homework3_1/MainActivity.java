@@ -1,6 +1,8 @@
 package com.example.rex.homework3_1;
 
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -48,26 +50,33 @@ public class MainActivity extends ActionBarActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        Rect rect=new Rect();
+        Paint paint=new Paint();
 
         switch (id) {
             case R.id.shape:
                 Toast.makeText(MainActivity.this, getString(R.string.shape), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.rect:
-                drawTest.rect.set(100,100,500,500);//只能用這種方式嗎?
-                drawTest.paint.setColor(Color.RED);
+                rect.set(100,100,500,500);//只能用這種方式嗎?
+                paint.setColor(Color.BLUE);
+                drawTest.canvas.drawRect(rect,paint);
                 Toast.makeText(MainActivity.this, getString(R.string.rect), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.circle:
+                paint.setColor(Color.BLUE);
+                drawTest.canvas.drawCircle(100,100,300,drawTest.paint);
                 Toast.makeText(MainActivity.this, getString(R.string.circle), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.color:
                 Toast.makeText(MainActivity.this, getString(R.string.color), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.red:
+                paint.setColor(Color.RED);
                 Toast.makeText(MainActivity.this, getString(R.string.red), Toast.LENGTH_SHORT).show();
                 break;
             case R.id.blue:
+                paint.setColor(Color.BLUE);
                 Toast.makeText(MainActivity.this, getString(R.string.blue), Toast.LENGTH_SHORT).show();
                 break;
         }
