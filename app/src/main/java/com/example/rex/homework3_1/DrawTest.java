@@ -29,6 +29,7 @@ public class DrawTest extends View{
         getPaint().setStyle(Paint.Style.FILL);//填滿形狀
         getPaint().setAntiAlias(true);//消除邊緣鋸齒
 
+        //判斷選擇的形狀，若不是rect(方形)則為circle(圓形)
         if(shape.equals("rect")) {
             rect.set(100, 100, 500, 500);
             canvas.drawRect(rect,getPaint());
@@ -37,7 +38,7 @@ public class DrawTest extends View{
         }
 
     }
-
+       //使用get,set方法取得並設定：shape的字串、paint相關參數
     public Paint getPaint() {
         return paint;
     }
