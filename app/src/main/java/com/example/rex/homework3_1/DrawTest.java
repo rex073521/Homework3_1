@@ -11,6 +11,7 @@ import android.view.View;
  * Created by REX on 2015/3/28.
  */
 public class DrawTest extends View{
+    //要使用get,set必須要new出物件或是給初始值
     private Paint paint=new Paint();
     private String shape="";
     private Rect rect = new Rect();
