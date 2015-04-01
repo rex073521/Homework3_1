@@ -28,10 +28,7 @@ public class MainActivity extends ActionBarActivity{
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        //先畫一個紅色圓形圖
-        drawTest.setShape("circle");
-        drawTest.getPaint().setColor(Color.RED);
-        drawTest.invalidate();
+
         switch (id) {
             case R.id.rect:
                 drawTest.setShape("rect");

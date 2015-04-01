@@ -11,8 +11,8 @@ import android.view.View;
  * Created by REX on 2015/3/28.
  */
 public class DrawTest extends View{
-    private Paint paint;
-    private String shape;
+    private Paint paint=new Paint();
+    private String shape="";
     private Rect rect = new Rect();
     public DrawTest(Context context) {
         super(context);
@@ -33,7 +33,7 @@ public class DrawTest extends View{
             rect.set(100, 100, 500, 500);
             canvas.drawRect(rect,getPaint());
         }else {
-            canvas.drawCircle(100, 100, 300, getPaint());
+            canvas.drawCircle(500, 600, 200, getPaint());
         }
 
     }
