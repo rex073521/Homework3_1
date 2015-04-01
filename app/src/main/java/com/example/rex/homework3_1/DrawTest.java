@@ -13,6 +13,7 @@ import android.view.View;
 public class DrawTest extends View{
     private Paint paint;
     private String shape;
+    private Rect rect = new Rect();
     public DrawTest(Context context) {
         super(context);
     }
@@ -24,16 +25,16 @@ public class DrawTest extends View{
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Rect rect = null;
-        getPaint().setStrokeWidth(20);//畫筆寬度
+        getPaint().setStrokeWidth(2f);//畫筆寬度
         getPaint().setStyle(Paint.Style.FILL);//填滿形狀
         getPaint().setAntiAlias(true);//消除邊緣鋸齒
+
         if(shape.equals("rect")) {
             rect.set(100, 100, 500, 500);
             canvas.drawRect(rect,getPaint());
-        }else
-            canvas.drawCircle(100,100,300,getPaint());
-
+        }else {
+            canvas.drawCircle(100, 100, 300, getPaint());
+        }
 
     }
 
